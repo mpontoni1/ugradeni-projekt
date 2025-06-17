@@ -1,0 +1,2 @@
+source /home/maki/Documents/Code/ugradeni/ugradeni-projekt/build/bootloader/gdbinit/symbols
+source /home/maki/Documents/Code/ugradeni/ugradeni-projekt/build/bootloader/gdbinit/connect

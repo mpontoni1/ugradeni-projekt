@@ -1,0 +1,11 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/maki/.espressif/python_env/idf6.0_py3.13_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 /home/maki/Documents/Code/ugradeni/ugradeni-projekt
+CMake Error at /home/maki/esp-idf/tools/cmake/build.cmake:328 (message):
+  Failed to resolve component 'esp_log' required by component 'esp32-DHT11':
+  unknown name.
+Call Stack (most recent call first):
+  /home/maki/esp-idf/tools/cmake/build.cmake:371 (__build_resolve_and_add_req)
+  /home/maki/esp-idf/tools/cmake/build.cmake:676 (__build_expand_requirements)
+  /home/maki/esp-idf/tools/cmake/project.cmake:736 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+

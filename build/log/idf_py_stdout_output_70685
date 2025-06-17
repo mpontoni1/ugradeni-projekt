@@ -1,0 +1,626 @@
+Command: /home/maki/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/maki/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/maki/Documents/Code/ugradeni/ugradeni-projekt/build/ugradeni-projekt.elf /home/maki/Documents/Code/ugradeni/ugradeni-projekt/build/bootloader/bootloader.elf -m '/home/maki/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/maki/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dev-4044-g8f224d6a63 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jun 16 2025 21:22:34[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a33ch ( 41788) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001a364 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001a38c vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001c79c vaddr=40080000 size=0387ch ( 14460) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14f04h ( 85764) map[0m
+[0;32mI (152) esp_image: segment 5: paddr=00034f2c vaddr=4008387c size=09908h ( 39176) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (185) cpu_start: Multicore app[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (193) app_init: Project name:     ugradeni-projekt[0m
+[0;32mI (198) app_init: App version:      1[0m
+[0;32mI (201) app_init: Compile time:     Jun 16 2025 21:22:26[0m
+[0;32mI (206) app_init: ELF file SHA256:  e75df0971...[0m
+[0;32mI (211) app_init: ESP-IDF:          v5.5-dev-4044-g8f224d6a63[0m
+[0;32mI (216) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (220) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (224) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (228) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (234) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFB2CE8 len 0002D318 (180 KiB): DRAM[0m
+[0;32mI (244) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (255) heap_init: At 4008D184 len 00012E7C (75 KiB): IRAM[0m
+[0;32mI (262) spi_flash: detected chip: generic[0m
+[0;32mI (264) spi_flash: flash io: dio[0m
+[0;33mW (267) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (279) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (287) main_task: Started on CPU0[0m
+[0;32mI (297) main_task: Calling app_main()[0m
+[1;31mE (1297) gpio: io_num=36 can only be input[0m
+[1;31mE (1297) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (1317) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (3317) gpio: io_num=36 can only be input[0m
+[1;31mE (3317) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (3337) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (5337) gpio: io_num=36 can only be input[0m
+[1;31mE (5337) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (5357) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (7357) gpio: io_num=36 can only be input[0m
+[1;31mE (7357) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (7377) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (9377) gpio: io_num=36 can only be input[0m
+[1;31mE (9377) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (9397) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (11397) gpio: io_num=36 can only be input[0m
+[1;31mE (11397) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (11417) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (13417) gpio: io_num=36 can only be input[0m
+[1;31mE (13417) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (13437) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (15437) gpio: io_num=36 can only be input[0m
+[1;31mE (15437) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (15457) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (17457) gpio: io_num=36 can only be input[0m
+[1;31mE (17457) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (17477) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (19477) gpio: io_num=36 can only be input[0m
+[1;31mE (19477) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (19497) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (21497) gpio: io_num=36 can only be input[0m
+[1;31mE (21497) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (21517) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (23517) gpio: io_num=36 can only be input[0m
+[1;31mE (23517) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (23537) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (25537) gpio: io_num=36 can only be input[0m
+[1;31mE (25537) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (25557) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (27557) gpio: io_num=36 can only be input[0m
+[1;31mE (27557) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (27577) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (29577) gpio: io_num=36 can only be input[0m
+[1;31mE (29577) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (29597) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (31597) gpio: io_num=36 can only be input[0m
+[1;31mE (31597) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (31617) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (33617) gpio: io_num=36 can only be input[0m
+[1;31mE (33617) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (33637) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (35637) gpio: io_num=36 can only be input[0m
+[1;31mE (35637) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (35657) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (37657) gpio: io_num=36 can only be input[0m
+[1;31mE (37657) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (37677) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (39677) gpio: io_num=36 can only be input[0m
+[1;31mE (39677) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (39697) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (41697) gpio: io_num=36 can only be input[0m
+[1;31mE (41697) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (41717) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (43717) gpio: io_num=36 can only be input[0m
+[1;31mE (43717) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (43737) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (45737) gpio: io_num=36 can only be input[0m
+[1;31mE (45737) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (45757) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (47757) gpio: io_num=36 can only be input[0m
+[1;31mE (47757) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (47777) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (49777) gpio: io_num=36 can only be input[0m
+[1;31mE (49777) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (49797) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (51797) gpio: io_num=36 can only be input[0m
+[1;31mE (51797) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (51817) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (53817) gpio: io_num=36 can only be input[0m
+[1;31mE (53817) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (53837) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (55837) gpio: io_num=36 can only be input[0m
+[1;31mE (55837) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (55857) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (57857) gpio: io_num=36 can only be input[0m
+[1;31mE (57857) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (57877) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (59877) gpio: io_num=36 can only be input[0m
+[1;31mE (59877) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (59897) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (61897) gpio: io_num=36 can only be input[0m
+[1;31mE (61897) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (61917) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (63917) gpio: io_num=36 can only be input[0m
+[1;31mE (63917) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (63937) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (65937) gpio: io_num=36 can only be input[0m
+[1;31mE (65937) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (65957) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (67957) gpio: io_num=36 can only be input[0m
+[1;31mE (67957) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (67977) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (69977) gpio: io_num=36 can only be input[0m
+[1;31mE (69977) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (69997) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (71997) gpio: io_num=36 can only be input[0m
+[1;31mE (71997) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (72017) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (74017) gpio: io_num=36 can only be input[0m
+[1;31mE (74017) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (74037) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (76037) gpio: io_num=36 can only be input[0m
+[1;31mE (76037) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (76057) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (78057) gpio: io_num=36 can only be input[0m
+[1;31mE (78057) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (78077) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (80077) gpio: io_num=36 can only be input[0m
+[1;31mE (80077) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (80097) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (82097) gpio: io_num=36 can only be input[0m
+[1;31mE (82097) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (82117) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (84117) gpio: io_num=36 can only be input[0m
+[1;31mE (84117) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (84137) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (86137) gpio: io_num=36 can only be input[0m
+[1;31mE (86137) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (86157) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (88157) gpio: io_num=36 can only be input[0m
+[1;31mE (88157) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (88177) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (90177) gpio: io_num=36 can only be input[0m
+[1;31mE (90177) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (90197) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (92197) gpio: io_num=36 can only be input[0m
+[1;31mE (92197) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (92217) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (94217) gpio: io_num=36 can only be input[0m
+[1;31mE (94217) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (94237) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (96237) gpio: io_num=36 can only be input[0m
+[1;31mE (96237) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (96257) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (98257) gpio: io_num=36 can only be input[0m
+[1;31mE (98257) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (98277) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (100277) gpio: io_num=36 can only be input[0m
+[1;31mE (100277) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (100297) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (102297) gpio: io_num=36 can only be input[0m
+[1;31mE (102297) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (102317) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (104317) gpio: io_num=36 can only be input[0m
+[1;31mE (104317) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (104337) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (106337) gpio: io_num=36 can only be input[0m
+[1;31mE (106337) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (106357) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (108357) gpio: io_num=36 can only be input[0m
+[1;31mE (108357) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (108377) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (110377) gpio: io_num=36 can only be input[0m
+[1;31mE (110377) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (110397) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (112397) gpio: io_num=36 can only be input[0m
+[1;31mE (112397) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (112417) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (114417) gpio: io_num=36 can only be input[0m
+[1;31mE (114417) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (114437) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (116437) gpio: io_num=36 can only be input[0m
+[1;31mE (116437) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (116457) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (118457) gpio: io_num=36 can only be input[0m
+[1;31mE (118457) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (118477) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (120477) gpio: io_num=36 can only be input[0m
+[1;31mE (120477) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (120497) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (122497) gpio: io_num=36 can only be input[0m
+[1;31mE (122497) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (122517) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (124517) gpio: io_num=36 can only be input[0m
+[1;31mE (124517) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (124537) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (126537) gpio: io_num=36 can only be input[0m
+[1;31mE (126537) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (126557) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (128557) gpio: io_num=36 can only be input[0m
+[1;31mE (128557) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (128577) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (130577) gpio: io_num=36 can only be input[0m
+[1;31mE (130577) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (130597) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (132597) gpio: io_num=36 can only be input[0m
+[1;31mE (132597) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (132617) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (134617) gpio: io_num=36 can only be input[0m
+[1;31mE (134617) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (134637) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (136637) gpio: io_num=36 can only be input[0m
+[1;31mE (136637) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (136657) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (138657) gpio: io_num=36 can only be input[0m
+[1;31mE (138657) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (138677) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (140677) gpio: io_num=36 can only be input[0m
+[1;31mE (140677) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (140697) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (142697) gpio: io_num=36 can only be input[0m
+[1;31mE (142697) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (142717) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (144717) gpio: io_num=36 can only be input[0m
+[1;31mE (144717) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (144737) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (146737) gpio: io_num=36 can only be input[0m
+[1;31mE (146737) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (146757) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (148757) gpio: io_num=36 can only be input[0m
+[1;31mE (148757) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (148777) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (150777) gpio: io_num=36 can only be input[0m
+[1;31mE (150777) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (150797) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+[1;31mE (1297) gpio: io_num=36 can only be input[0m
+[1;31mE (1297) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (1317) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (3317) gpio: io_num=36 can only be input[0m
+[1;31mE (3317) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (3337) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (5337) gpio: io_num=36 can only be input[0m
+[1;31mE (5337) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (5357) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (7357) gpio: io_num=36 can only be input[0m
+[1;31mE (7357) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (7377) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (9377) gpio: io_num=36 can only be input[0m
+[1;31mE (9377) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (9397) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (11397) gpio: io_num=36 can only be input[0m
+[1;31mE (11397) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (11417) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+-1.000000
+-1.000000
+-1.000000
+-1.000000
+[1;31mE (13417) gpio: io_num=36 can only be input[0m
+[1;31mE (13417) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[1;31mE (13437) gpio: gpio_set_l
