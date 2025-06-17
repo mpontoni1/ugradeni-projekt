@@ -5,6 +5,7 @@
 #include "driver/adc.h"
 #include "dht11.h"
 #include "driver/i2c.h"
+#include "driver/ledc.h"
 
 // MQ135 digital pin
 #define MQ_digital GPIO_NUM_13
@@ -24,6 +25,12 @@
 #define LCD_BACKLIGHT 0x08
 #define LCD_ENABLE 0x04
 #define LCD_RS 0x01
+
+#define SERVO_PIN GPIO_NUM_18
+#define SERVO_MIN 1000
+#define SERVO_MAX 2000
+#define SERVO_TIMER LEDC_TIMER_0
+#define SERVO_CHANNEL LEDC_CHANNEL_0
 
 // delay funkcija
 
@@ -106,6 +113,20 @@ void lcd_print(const char *s)
         lcd_char(*s++);
 }
 
+void servoWrite(int angle)
+{
+    if (angle < 0)
+        angle = 0;
+    if (angle > 180)
+        angle = 180;
+
+    int pulse_width = SERVO_MIN + ((SERVO_MAX - SERVO_MIN) * angle) / 180;
+    int duty = (pulse_width * 65535) / 20000;
+
+    ledc_set_duty(LEDC_LOW_SPEED_MODE, SERVO_CHANNEL, duty);
+    ledc_update_duty(LEDC_LOW_SPEED_MODE, SERVO_CHANNEL);
+}
+
 void app_main(void)
 {
 
@@ -131,14 +152,30 @@ void app_main(void)
         .scl_pullup_en = true,
         .master.clk_speed = I2C_FREQ,
     };
+
     i2c_param_config(I2C_PORT, &cfg);
     i2c_driver_install(I2C_PORT, cfg.mode, 0, 0, 0);
 
     lcd_init();
 
+    ledc_timer_config_t timer_config = {
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .timer_num = LEDC_TIMER_0,
+        .duty_resolution = LEDC_TIMER_16_BIT,
+        .freq_hz = 50,
+        .clk_cfg = LEDC_AUTO_CLK};
 
+    ledc_timer_config(&timer_config);
 
-    
+    ledc_channel_config_t channel_config = {
+        .gpio_num = SERVO_PIN,
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .channel = LEDC_CHANNEL_0,
+        .timer_sel = LEDC_TIMER_0,
+        .duty = 0,
+        .hpoint = 0};
+
+    ledc_channel_config(&channel_config);
 
     while (1)
     {
@@ -149,16 +186,16 @@ void app_main(void)
         // Dohvati trenutnu vrijednost temperature i vlage sa DHT11
         temperature = DHT11_read().temperature;
         humidity = DHT11_read().humidity;
-        int airQ = (MQreadAnalog * 100)/4096;
+        int airQ = (MQreadAnalog * 100) / 4096;
         char tempStr[3];
         char humStr[2];
         char airqStr[10];
 
-        sprintf(tempStr,"%d",temperature);
-        sprintf(humStr,"%d",humidity);
-        sprintf(airqStr,"%d",airQ);
+        sprintf(tempStr, "%d", temperature);
+        sprintf(humStr, "%d", humidity);
+        sprintf(airqStr, "%d", airQ);
 
-        printf("%s\n",airqStr);
+        printf("%s\n", airqStr);
 
         lcd_set_cursor(0, 0);
         lcd_print("Temp:");
@@ -166,12 +203,13 @@ void app_main(void)
         lcd_set_cursor(9, 0);
         lcd_print("Hum:");
         lcd_print(humStr);
-        lcd_set_cursor(0,1);
+        lcd_set_cursor(0, 1);
         lcd_print("Air Q: ");
-        lcd_set_cursor(7,1);
+        lcd_set_cursor(7, 1);
         lcd_print(airqStr);
         lcd_print("%");
 
+        servoWrite(180);
 
         delay(500);
     }
